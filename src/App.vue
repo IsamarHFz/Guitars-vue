@@ -36,10 +36,11 @@ function agregarCarrito(guitar){
     carrito.value[guitarId].cantidad++
 }
 
-function agregaUno(id){
-  const idCarrito=carrito.value.findIndex(g => g.id === id)
-  if(carrito.value[idCarrito].cantidad>1)
-    carrito.value[idCarrito].cantidad++
+function agregaUno(id) {
+  const idCarrito = carrito.value.findIndex(g => g.id === id);
+  if (idCarrito !== -1) {
+    carrito.value[idCarrito].cantidad++;
+  }
 }
 
 function quitaUno(id){
